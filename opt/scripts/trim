@@ -1,0 +1,11 @@
+echo "************************************************************************************"
+echo "TRIM"
+echo "************************************************************************************"
+date
+if hdparm -I /dev/sda | grep -q 'TRIM supported'; then
+  echo "Trim Suportado"
+  fstrim -v /
+else
+  echo "Trim não suportado"
+  touch /opt/Trim/nosupported
+fi
