@@ -1,0 +1,13 @@
+#!/bin/sh
+log1=$(fstrim -v /)
+log2=$(fstrim -v /home)
+log3=$(date)
+
+
+sed -i '1 i\_________________________________________' /opt/Trim/logs/trim.log
+
+sed -i -e "1i${log2}" /opt/Trim/logs/trim.log
+
+sed -i -e "1i${log1}" /opt/Trim/logs/trim.log
+
+sed -i -e "1i${log3}" /opt/Trim/logs/trim.log
