@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp /opt/Trim/scripts/timer-trim /etc/cron.hourly/
+chmod 755 -R /etc/cron.hourly/timer-trim
